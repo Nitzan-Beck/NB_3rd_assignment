@@ -1,5 +1,6 @@
 package com.example.nb_3rd_assignment;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -69,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
         if (player.containsAll(row1)||player.containsAll(row2)||player.containsAll(row3)||player.containsAll(column1)||player.containsAll(column2)||player.containsAll(column3)||player.containsAll(slant1)||player.containsAll(slant2))
             return true;
         else return false;
+    }
+    private  void displayWinner(String Winner){
+        AlertDialog.Builder adb=new AlertDialog.Builder(this);
+        adb.setTitle("The winner is:");
+        adb.setPositiveButton("Ok",null);
+        adb.create().show();
     }
 
 }
